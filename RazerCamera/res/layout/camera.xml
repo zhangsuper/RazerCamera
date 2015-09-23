@@ -1,0 +1,287 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <!-- 上边 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_topmenu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_menu_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue_deep"
+         >
+        
+        <TextView
+            android:id="@+id/tv_mode_top_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="大片"
+            android:textColor="@color/white_deep"
+            android:textSize="16sp" />
+        
+        
+        <ImageView
+            android:id="@+id/iv_finish_top_camera"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+        
+        
+        <ImageView
+            android:id="@+id/btn_flash_top_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/btn_flash_on" />
+        
+
+        <ImageView
+            android:id="@+id/btn_switch_top_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/btn_flash_top_camera"
+            android:src="@drawable/ic_camera_top_bar_sw_camera" />
+
+    </RelativeLayout>
+
+    
+    
+    <!-- 下边 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_bottommenu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_bar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue_deep"
+        android:baselineAligned="false"
+         >
+
+        <ImageView
+            android:id="@+id/iv_mode_bottom_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/mode"
+            />
+        
+
+        <ImageButton
+            android:id="@+id/btn_shutter_bottom_camera"
+            android:layout_width="@dimen/shutter_bottom_size"
+            android:layout_height="@dimen/shutter_bottom_size"
+            android:background="@drawable/btn_shutter_camera"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"
+             />
+        
+       
+        <TextView
+            android:id="@+id/tv_gallery_bottom_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="从相册选"
+            android:textColor="@color/blue_light"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+    
+    
+    
+    
+    
+    
+    
+    <!-- 左边 -->
+    <RelativeLayout
+        android:id="@+id/rl_leftmenu"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@color/blue_deep"
+        android:visibility="gone"
+         >
+
+        <TextView
+            android:id="@+id/tv_mode_left_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="大片"
+            android:textColor="@color/white_deep"
+            android:textSize="16sp" />
+        
+        
+        <ImageView
+            android:id="@+id/iv_finish_left_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/back" />
+        
+        
+        <ImageView
+            android:id="@+id/btn_flash_left_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/btn_flash_on" />
+        
+
+        <ImageView
+            android:id="@+id/btn_switch_left_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_flash_left_camera"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_camera_top_bar_sw_camera"
+             />
+        
+    </RelativeLayout>
+
+    
+    
+    
+    <!-- 右边-->
+
+    <RelativeLayout
+        android:id="@+id/rl_rightmenu"
+        android:layout_width="75dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/blue_deep"
+        android:baselineAligned="false"
+        android:visibility="gone"
+         >
+
+        <ImageView
+            android:id="@+id/iv_mode_right_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/mode"
+            />
+        
+        
+        <ImageButton
+            android:id="@+id/btn_shutter_right_camera"
+            android:layout_width="@dimen/shutter_bottom_size"
+            android:layout_height="@dimen/shutter_bottom_size"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_shutter_camera"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_gallery_right_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="相册"
+            android:textColor="@color/blue_light"
+            android:textSize="16sp" />
+            
+    </RelativeLayout>
+    
+    
+    
+    
+    
+    <!-- 普通遮挡层 -->
+    <ImageView 
+        android:id="@+id/iv_normalbg_camera"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@id/rl_bottommenu"
+        android:src="@color/black_transparent"
+        android:visibility="gone"
+        />
+    
+    
+
+    <!-- 大片遮挡层 -->
+    <RelativeLayout 
+        android:id="@+id/rl_filmbg_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_topmenu"
+        android:layout_above="@id/rl_bottommenu"
+        android:layout_toLeftOf="@id/rl_rightmenu"
+        android:layout_toRightOf="@id/rl_leftmenu"
+        android:background="@color/bg_film"
+        >
+        
+        <ImageView 
+			android:id="@+id/iv_film_camera"            
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg_film_camera"
+            />
+        
+    </RelativeLayout>
+        
+    
+    
+    
+    <RelativeLayout 
+        android:id="@+id/rl_pb_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_topmenu"
+        android:layout_above="@id/rl_bottommenu"
+        android:layout_toLeftOf="@id/rl_rightmenu"
+        android:layout_toRightOf="@id/rl_leftmenu"
+        android:visibility="gone"
+        >
+        
+        <ProgressBar 
+	        android:id="@+id/pb_take_camera"
+	        android:layout_width="30dp"
+	        android:layout_height="30dp"
+	        android:indeterminateDrawable="@drawable/rotate_progressbar"
+	        android:layout_centerInParent="true"
+	        />
+        
+    </RelativeLayout>
+    
+    
+    
+
+    <com.lucifer.razercameralib.camera.CameraContainer
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_topmenu"
+        android:layout_above="@id/rl_bottommenu"
+        android:layout_toLeftOf="@id/rl_rightmenu"
+        android:layout_toRightOf="@id/rl_leftmenu"
+         />
+    
+    
+    
+    
+</RelativeLayout>
